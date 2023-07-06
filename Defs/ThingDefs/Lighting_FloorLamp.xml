@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BrokenGlass</filthLeaving>
+  </ThingDef>
+
+  <!-- ======================== Lighting ======================= -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Lighting_FloorLamp</defName>
+    <label>floor lamp</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Building/Lights/FloorLamp</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+	<statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToMake>175</WorkToMake>
+      <Flammability>0.1</Flammability>
+      <Beauty>10</Beauty>
+    </statBases>
+    <selectable>true</selectable>
+    <description>Floor light that lights an area.</description>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>25</Steel>
+    </costList>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>75</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>19</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Flickable"> 
+	  </li>
+    </comps>
+    <designationCategory>Furniture</designationCategory>
+    <rotatable>false</rotatable>
+	<researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  
+  
+</Buildings>

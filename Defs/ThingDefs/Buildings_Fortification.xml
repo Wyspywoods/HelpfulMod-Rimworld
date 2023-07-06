@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>Fortification</defName>
+		<label>Fortification</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/Linked/Fortification_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Wall</li>
+			</linkFlags>
+		</graphicData>
+		<blueprintGraphicData>
+			<texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+		</blueprintGraphicData>
+		<uiIconPath>Things/Building/Linked/Fortification_MenuIcon</uiIconPath>
+		<altitudeLayer>Building</altitudeLayer>
+		<pathCost>90</pathCost>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.75</fillPercent>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<statBases>
+			<MaxHitPoints>900</MaxHitPoints>
+			<Beauty>3</Beauty>
+			<WorkToMake>550</WorkToMake>
+			<Flammability>0</Flammability>
+		</statBases>
+		<building>
+			<isInert>true</isInert>
+		</building>
+		<description>Expensive but a considerable improvement over sandbags in it's cover from gunfire.</description>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<costList>
+          <Uranium>30</Uranium>
+        </costList>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Security</designationCategory>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+	</ThingDef>
+
+</ThingDefs>

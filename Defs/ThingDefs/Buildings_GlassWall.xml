@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+  
+  <ThingDef ParentName="BuildingBase" Name="Window">
+    <defName>GlassWall</defName>
+    <label>glass wall</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <description>A wall made almost entirely of polarized tempered glass. Considerably weaker than most walls but allows artificial light to pass through. Extremely vulnerable to explosives. </description>
+    <graphicData>
+      <texPath>Things/Building/Linked/GlassWall_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+    </graphicData>
+    <blueprintGraphicData>
+      <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+    </blueprintGraphicData>
+    <uiIconPath>Things/Building/Linked/GlassWallUI</uiIconPath>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+	  <MarketValue>10</MarketValue>
+      <WorkToMake>150</WorkToMake>
+      <Flammability>0</Flammability>
+	  <Beauty>3</Beauty>
+    </statBases>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+	<coversFloor>true</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>false</neverMultiSelect>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>false</blockLight>
+	<costList>
+		<Steel>15</Steel>
+		<WoodLog>5</WoodLog>
+	</costList>
+    <building>
+      <isInert>true</isInert>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+	  <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>3</multiplier>
+      </li>
+    </damageMultipliers>
+    <filthLeaving>BrokenGlass</filthLeaving>
+  </ThingDef>
+ 
+</Buildings>
